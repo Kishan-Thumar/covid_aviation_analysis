@@ -3,10 +3,10 @@ assert sys.version_info >= (3, 5) # make sure we have Python 3.5+
 from pyspark.sql import SparkSession, functions, types
 from pyspark.sql.functions import split
 
-spark = SparkSession.builder.appName('passengers data').getOrCreate()
-# Make sure we have Spark 3.0+
-assert spark.version >= '3.0' 
-spark.sparkContext.setLogLevel('WARN')
+# spark = SparkSession.builder.appName('passengers data').getOrCreate()
+# # Make sure we have Spark 3.0+
+# assert spark.version >= '3.0' 
+# spark.sparkContext.setLogLevel('WARN')
 
 @functions.udf(returnType=types.StringType())
 def processed_file_name(flight):
@@ -19,7 +19,7 @@ def processed_file_name(flight):
     else:
         return flight
     
-def fetch_passengers_data(passengers,service_class,data_source):    
+def fetch_passengers_data(spark,passengers,service_class,data_source):    
     #path to respective files
     #passengers = '/Users/himalyabachwani/Documents/Big_Data_732/project_data/849844085_T_T100_SEGMENT_ALL_CARRIER.csv'
     #service_class = '/Users/himalyabachwani/Documents/Big_Data_732/project_data/Service_class.csv'
@@ -45,8 +45,7 @@ def fetch_passengers_data(passengers,service_class,data_source):
                             SUM(PD.FREIGHT) AS Freight, SUM(PD.MAIL) AS Mail,
                             AVG(PD.DISTANCE) AS Distance, PD.UNIQUE_CARRIER, PD.UNIQUE_CARRIER_NAME,
                             PD.ORIGIN_STATE_ABR, PD.ORIGIN_STATE_NM, PD.DEST_STATE_ABR, PD.DEST_STATE_NM,
-                            PD.YEAR, PD.MONTH, PD.CLASS, PD.DATA_SOURCE,
-                            SC.Description AS SERVICE_CLASS, DS.Description AS CARRIER_ORIGIN
+                            PD.YEAR, PD.MONTH, PD.DATA_SOURCE, DS.Description AS CARRIER_ORIGIN
                             FROM processed_passengers_data AS PD
                             JOIN service_class_data AS SC
                             ON PD.CLASS = SC.Code
@@ -55,7 +54,6 @@ def fetch_passengers_data(passengers,service_class,data_source):
                             WHERE DS.Code IN ('DU','DF')
                             GROUP BY PD.UNIQUE_CARRIER, PD.UNIQUE_CARRIER_NAME,
                             PD.ORIGIN_STATE_ABR, PD.ORIGIN_STATE_NM, PD.DEST_STATE_ABR, PD.DEST_STATE_NM,
-                            PD.YEAR, PD.MONTH, PD.CLASS, PD.DATA_SOURCE,
-                            SC.Description, DS.Description
+                            PD.YEAR, PD.MONTH, PD.DATA_SOURCE, DS.Description
     """)
     return final_passengers_data
