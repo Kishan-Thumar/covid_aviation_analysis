@@ -18,8 +18,8 @@ Delay Data : https://1sfu-my.sharepoint.com/:f:/g/personal/krt4_sfu_ca/EsQhv_uPo
 Passenger Data : https://1sfu-my.sharepoint.com/:f:/g/personal/krt4_sfu_ca/EkTjMdv6AZdJiTE03igJ_K0BgvISiD6hHqUp-UFjP7nS3A?e=jCvyVB
 
 ### Tableau link of our project:
-Basic Visualisation: https://public.tableau.com/app/profile/dhruv4657/viz/Covid-19AviationAnalysis/Airline-Covid  
-Advance Visualisation: https://public.tableau.com/app/profile/himalya1749/viz/CovidAviationUSAnalysis/CovidDepDelay
+Basic Visualization: https://public.tableau.com/app/profile/dhruv4657/viz/Covid-19AviationAnalysis/Airline-Covid  
+Advance Visualization: https://public.tableau.com/app/profile/himalya1749/viz/CovidAviationUSAnalysis/CovidDepDelay
 
 ### Steps to run the project:
 Refer to running.md file
