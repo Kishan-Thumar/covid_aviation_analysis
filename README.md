@@ -7,7 +7,7 @@
 - Rahil Balar
 
 ### Data Pipeline: 
-![Project_Pipeline](./images/Data_flow.png.png)
+![Data_flow](./images/Data_flow.png)
 
 ### Project Working:
 
