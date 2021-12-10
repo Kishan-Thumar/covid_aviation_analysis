@@ -1,4 +1,5 @@
 # Covid-19 Aviation Analysis
+We aim to analyse Covid-19 impacts on Aviation Industry.
 
 ### Team Members:
 - Dhruv Patel
@@ -14,19 +15,24 @@
 
 ### Dataset:
 Delay Data : https://1sfu-my.sharepoint.com/:f:/g/personal/krt4_sfu_ca/EsQhv_uPoFhMnibqiD4s29EBKBG2S1EMf1_Gd5YMHqA0hQ?e=mw30Zm  
-Passenger Data https://1sfu-my.sharepoint.com/:f:/g/personal/krt4_sfu_ca/EkTjMdv6AZdJiTE03igJ_K0BgvISiD6hHqUp-UFjP7nS3A?e=9dgLNC
+Passenger Data : https://1sfu-my.sharepoint.com/:f:/g/personal/krt4_sfu_ca/EkTjMdv6AZdJiTE03igJ_K0BgvISiD6hHqUp-UFjP7nS3A?e=9dgLNC
 
 ### Tableau link of our project:
 https://public.tableau.com/app/profile/dhruv4657/viz/Covid-19AviationAnalysis/Airline-Covid
 https://public.tableau.com/app/profile/himalya1749/viz/CovidAviationUSAnalysis/Dashboard2
 
 ### Steps to run the project:
-1. Get the input files using the dataset link provided.
-2. Download all *.py files and create config.py file with the key mentioned in report.
-3. 
+1. Get the input files using the dataset link provided. 
+2. Download all *.py files.
+3. Upload all the files to AWS-S3 and spin-up AWS-EMR instance with m5.xlarge. 
+4. Add a new step in the cluster as mentioned in running.md file.
+5. After successful execution, it will send data to S3.
+6. Further its connected to Tableau using AWS-Athena.
 
+### Report PDF:
+https://docs.google.com/document/d/1T0UzcXiEHKlb_jAHS288hDs4HPa-ZqFPVchu074UiM8/edit?usp=sharing
 
-### Report Link: 
-
+### Presentation: 
+https://prezi.com/view/cc8SFviUjjFH8eDfnglP/
 
 
