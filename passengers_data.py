@@ -1,5 +1,5 @@
 import sys, re
-assert sys.version_info >= (3, 5) # make sure we have Python 3.5+
+assert sys.version_info >= (3, 5)
 from pyspark.sql import SparkSession, functions, types
 from pyspark.sql.functions import split, when, lit, col
 
@@ -8,6 +8,7 @@ from pyspark.sql.functions import split, when, lit, col
 # assert spark.version >= '3.0' 
 # spark.sparkContext.setLogLevel('WARN')
 
+# UDF function to get appropriate carrier name
 @functions.udf(returnType=types.StringType())
 def processed_file_name(flight):
     fka_re = " fka | f/k/a "
