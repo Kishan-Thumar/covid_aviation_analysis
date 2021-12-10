@@ -22,12 +22,7 @@ https://public.tableau.com/app/profile/dhruv4657/viz/Covid-19AviationAnalysis/Ai
 https://public.tableau.com/app/profile/himalya1749/viz/CovidAviationUSAnalysis/Dashboard2
 
 ### Steps to run the project:
-1. Get the input files using the dataset link provided. 
-2. Download all *.py files.
-3. Upload all the files to AWS-S3 and spin-up AWS-EMR instance with m5.xlarge. 
-4. Add a new step in the cluster as mentioned in running.md file.
-5. After successful execution, it will send data to S3.
-6. Further its connected to Tableau using AWS-Athena.
+Refer to running.md file
 
 ### Report PDF:
 https://docs.google.com/document/d/1T0UzcXiEHKlb_jAHS288hDs4HPa-ZqFPVchu074UiM8/edit?usp=sharing
