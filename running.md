@@ -20,7 +20,7 @@ Upload the below mentioned files in S3
 
 - In the add steps dialogue enter the following fields
 -- Step type (Dropdown): Spark Application
--- Name (Text): Relative average Reddit-1
+-- Name (Text): My Covid Application
 -- Deploy mode (Dropdown): Client
 -- Spark-submit options (Text): --conf spark.yarn.maxAppAttempts=1 --py-files s3://cmpt732-project-data/config.py,s3://cmpt732-project-data/covid_data.py,s3://cmpt732-project-data/passengers_data.py,s3://cmpt732-project-data/delay_data.py 
 -- Application location (Text): s3://cmpt732-project-data/main.py 
